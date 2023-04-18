@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Toys ABC</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Toys ABC offering beautiful toys for kids of all age groups">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    section { margin-top: 4rem; }
+    .navbar-light { background-color: lightblue; color: navy; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-light navbar-fixed-top">
+  <div class="container-fluid">
+
+    <header class="navbar-header">
+      
+      <a class="navbar-brand" href="home.html">Toys ABC</a>
+    </header>
+
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="home.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="extra.html">Extra</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<section class="container">
+  <h1> Location </h1> 
+
+  <p> Click on the button bellow </p>
+
+  <button onclick="userPostition()"> Click here </button>
+  <p id="position"></p> 
+  
+
+  
+  
+</section>
+<script>
+    var x = document.getElementById("position");
+    function userPostition(){
+      if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+
+      }
+
+      else{
+        x.innerHTMML = "Geolocation is not available.";
+      }
+    }
+
+      function showPosition(pos){
+        x.innerHTML = "Latitude " + pos.coords.latitude + "<br>" +
+        "Longitude " + pos.coords.longitude;
+      }
+        
+</script>
+
+</body>
+</html>
