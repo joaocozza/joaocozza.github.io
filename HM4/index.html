@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" text="text/html"> 
+     <!-- http equivalent = simulate an http response -->
+    <meta name="viewport" content="width=device-width , inicial-scale=1">
+    <meta charset="utf-8"> 
+    <title> Homework 4 </title>  
+    <link rel="stylesheet" type="text/css" href="index.css"> 
+    <!--charset utf covers nearly all symbols and characters in the world-->
+    
+    <script>
+
+        if(navigator && navigator.serviceWorker){
+            navigator.serviceWorker.register('sw.js');
+        }
+        
+    </script>
+
+    <script>
+
+        // I am using the id of the element to make the event happen
+        function changeBG(){
+// getting the element 'color' and 
+            var e = document.getElementById("color");
+            var bg = e.options[e.selectedIndex].value;
+            
+          
+
+          document.getElementById("main").style.backgroundImage= "url('"+bg+"')"; 
+        }
+    </script>
+    <link rel="manifest" href="manifest.json"> 
+
+    <!--script for location-->
+   
+    
+    <!-- create service worker java script file with name 'sw.js'
+    
+    After this step is done, need to create the manifest file which will be called manifest.json -->
+</head>
+
+<body id="main"> 
+    
+    <label for="backgroundcolor"> Choose a background color. </label>
+    <br>
+
+    <select name="backgroundcolor" id="color" onchange="changeBG();">
+
+        <option value="lightblue.jpg"> Blue Color </option>
+        <option value="lightgold.jpg"> Gold Color </option>
+
+    </select>
+
+    <h2> PWA - Progressive Web Application </h2>
+    <br>
+
+    <p> On Web developement, we have the methodology known as PWA. This feature combines different technologies in a way to make web application more stable and realiable. 
+        Below you will see some characteristics. 
+    </p>
+
+    <br> 
+    <h2> Main points of Progressive Web Design</h2>
+    <br> 
+
+    <h2> Reliability: </h2><p>  This feature means that, when the user is using an mobile application, PWA loads the content of the application even if the user doesn't have a network.</p>
+
+    <h2> Fasteness: </h2><p>  Today most people doesn't so much have patience to stay waiting for an web application to work. So, progessive web application comes to make sure that the user won't waint so much time to have 
+        al the content of the page loaded. </p>
+ 
+    <h2> Cross-device capability: </h2> <p>  PWA are built in programming languages such as: HTML, CSS and JavaScript that is hosted in web server, which is built for Web. However, all the content crated for web, also works in web broswers for mobile devices, considering that PWA, scales up the same content presented for desktop's and laptops, in application for mobile and broswers embbeded on smart TVs.</p>
+    
+
+
+
+    
+
+</body>
+ 
+</html>

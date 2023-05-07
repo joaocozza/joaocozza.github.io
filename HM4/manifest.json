@@ -1,0 +1,17 @@
+{
+    "name":"index.html",
+    "short_name":"page",
+    "descrition":"first page PWA for CIS 128 course",
+    "theme_color":"#bee2ef",
+    "background_color":"#cccccc",
+    "display":"standalone",
+    "orientation":"portrait",
+    "start_url":"/index.html",
+    "scope":"/",
+    "icons":[ 
+
+    ["src","icons192.png","size","192x192","type","image/png"],
+    ["src","icons512.png","size","512x512","type","image/png"],
+    ["src","icons512.png","size","512x512","type","image/png","purpose","maskable"]
+    ]
+}
