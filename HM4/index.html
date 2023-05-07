@@ -20,7 +20,7 @@
         window.addEventListener("load", function () {
 
         navigator.serviceWorker
-          .register(window.location.pathname + "sw.js") 
+          .register(window.location.pathname + "serviceWorker.js") 
           .then(res => console.log("service worker registered"))
           .catch(err => console.log("service worker not registered", err));
       });
