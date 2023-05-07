@@ -7,7 +7,7 @@
     "display":"standalone",
     "orientation":"portrait",
     "start_url":"/index.html",
-    "scope":"/HM4/",
+    "scope":"https://joaocozza.github.io/HM4/",
     "icons":[ 
 
     ["src","icons192.png","size","192x192","type","image/png"],
