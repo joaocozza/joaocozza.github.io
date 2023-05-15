@@ -1,4 +1,4 @@
-let coreAssets = ["index.html","index.css","lightblue.jpg","lightgold.jpg","icons512.png","icons192.png","manifest.json"];
+let coreAssets = ["shorttask.html","shorttask.css"];
 
 // On install, cache core assets
 self.addEventListener('install', function (event) {

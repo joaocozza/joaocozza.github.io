@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="content-type" text="text/html"> 
-     <!-- http equivalent = simulate an http response -->
+    <!--http equivalent = simulate an http response -->
     <meta name="viewport" content="width=device-width , inicial-scale=1">
     <meta charset="utf-8"> 
     <title> Homework 4 </title>  
@@ -31,7 +31,27 @@
         
     </script>
 
+    //script to run geolocation 
     <script>
+
+        var w = document.getElementById(place);
+
+        function position(){
+            if(navigator.geolocation)
+                geolocation.getCurrentPosition(userPlace);
+
+            else 
+                w.innerHTML = "location not supported";
+        }
+
+        function userPlace(pos){
+            w.innerHTML= "latitude" + pos.coords.latitude;
+            w.innerHTML = "longitude" + pos.coords.longitude; 
+
+            // inner.html returns the HTML element 
+
+        }
+    </script>
 
         // I am using the id of the element to make the event happen
         function changeBG(){
@@ -44,12 +64,9 @@
           document.getElementById("main").style.backgroundImage= "url('"+bg+"')"; 
         }
     </script>
-
-
+ 
     <!--script for location-->
-   
-    
-    <!-- create service worker java script file with name 'sw.js'
+   <!-- create service worker java script file with name 'sw.js'
     
     After this step is done, need to create the manifest file which will be called manifest.json -->
 </head>
@@ -65,6 +82,8 @@
         <option value="lightgold.jpg"> Gold Color </option>
 
     </select>
+
+    <button class="btn btn-primary" type="button" name="location" onclick="userPlace()" ></button>
 
     <h2> PWA - Progressive Web Application </h2>
     <br>
